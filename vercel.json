@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "functions": {
+    "api/notify.js": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}
