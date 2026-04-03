@@ -13,10 +13,8 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        from: 'OptitechIA <onboarding@resend.dev>',
-        // ⚠️ TEMPORAL: solo permite enviar al email de la cuenta Resend hasta que se verifique optitechia.cl
-        // Una vez verificado el dominio → cambiar a: ['contacto@optitechia.cl']
-        to: ['paulinagutierrez.ucae@gmail.com'],
+        from: 'OptitechIA <contacto@optitechia.cl>',
+        to: ['contacto@optitechia.cl'],
         subject: `📋 Nuevo diagnóstico — ${cliente}${nombre ? ' · ' + nombre : ''}`,
         text: transcripcion,
         html: `
