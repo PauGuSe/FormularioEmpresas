@@ -111,7 +111,7 @@
     background: var(--brand-mid);
     padding: 14px 40px;
     position: sticky;
-    top: 0;
+    top: 60px;
     z-index: 100;
   }
   .progress-inner { max-width: 760px; margin: 0 auto; display: flex; align-items: center; gap: 14px; }
@@ -507,6 +507,47 @@
 
   @keyframes spin { to { transform: rotate(360deg); } }
 
+  /* ── NAVBAR ── */
+  .top-navbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    box-shadow: 0 1px 12px rgba(13,27,75,.06);
+  }
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .navbar-logo img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+  .navbar-logo span {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: -.01em;
+  }
+  .navbar-logo .ia-gradient {
+    background: linear-gradient(90deg, #06b6d4, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  @media (max-width: 600px) {
+    .top-navbar { padding: 0 20px; height: 52px; }
+  }
+
   @media (max-width: 600px) {
     .form-wrap { padding: 28px 20px 60px; }
     .block-header, .block-body { padding: 18px 20px; }
@@ -518,14 +559,17 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
+<nav class="top-navbar">
+  <a class="navbar-logo" href="https://www.optitechia.cl" target="_blank">
+    <img src="isotipo_Optitechia.png" alt="OptitechIA">
+    <span>Optitech<span class="ia-gradient">IA</span></span>
+  </a>
+</nav>
+
 <!-- HEADER -->
 <header class="page-header">
   <div class="header-inner">
-    <!-- LOGO OptitechIA -->
-    <div style="display:flex; align-items:center; gap:10px; margin-bottom:28px;">
-      <img src="isotipo_Optitechia.png" alt="OptitechIA" style="height:44px; width:auto; display:block;">
-      <span style="font-family:'Inter',sans-serif; font-size:20px; font-weight:700; color:#fff; letter-spacing:-.01em;">Optitech<span style="background:linear-gradient(90deg,#06b6d4,#10b981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">IA</span></span>
-    </div>
     <div class="header-tag">Formulario de diagnóstico</div>
     <!-- ✏️ EDITAR: Nombre de la empresa cliente -->
     <h1>Fundación Sapienscia</h1>
