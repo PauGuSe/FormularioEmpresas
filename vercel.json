@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "buildCommand": "",
-  "outputDirectory": ".",
-  "functions": {
-    "api/notify.js": {
-      "runtime": "nodejs20.x"
-    }
-  }
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "api/notify.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/notify", "dest": "/api/notify.js" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
 }
